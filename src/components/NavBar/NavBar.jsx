@@ -26,10 +26,18 @@ export const NavBar = () => {
                 <MenuItem>
                     <MenuLink to="/services">Послуги</MenuLink> 
                 </MenuItem>
-            {/* <Link to="/law">Законодавство</Link>
-            <Link to="/about">Про нас</Link>
-            <Link to="/licenses">Ліцензії</Link>
-            <Link to="/contacts">Контакти</Link>  */}
+                <MenuItem>
+                    <MenuLink to="/law">Законодавство</MenuLink>
+                </MenuItem>
+                <MenuItem>
+                    <MenuLink to="/about">Про нас</MenuLink>
+                </MenuItem>
+                <MenuItem>
+                    <MenuLink to="/licenses">Ліцензії</MenuLink>
+                </MenuItem>
+                <MenuItem>
+                    <MenuLink to="/contacts">Контакти</MenuLink> 
+                </MenuItem>
              </Menu>
         </Nav>
     )
