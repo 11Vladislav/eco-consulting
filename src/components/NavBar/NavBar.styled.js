@@ -7,7 +7,7 @@ export const MenuLink = styled(NavLink)`
     text-decoration: none;
     color: black;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
     text-decoration: none;
     transform: scale(1);
     transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);

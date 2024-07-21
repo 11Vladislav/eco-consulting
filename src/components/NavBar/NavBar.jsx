@@ -18,9 +18,6 @@ export const NavBar = () => {
             </Burger>
             <Menu open={open}>
                 <MenuItem>
-
-                </MenuItem>
-                <MenuItem>
                     <MenuLink to="/">Головна</MenuLink> 
                 </MenuItem>
                 <MenuItem>
