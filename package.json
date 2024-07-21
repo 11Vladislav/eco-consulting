@@ -2,7 +2,7 @@
   "name": "eco-consulting",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://11Vladislav.github.io/eco-consulting/",
+  "homepage": "https://11vladislav.github.io/eco-consulting/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",

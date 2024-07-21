@@ -6,7 +6,9 @@ import {
     ButtonContainer, 
     Button, 
     Proposal, 
-    ProposalTitle } from './HomePage.styled';
+    ProposalTitle,
+    Text
+} from './HomePage.styled';
 
 export const HomePage = () => {
 
@@ -24,6 +26,7 @@ export const HomePage = () => {
       </HomeContainer>
         <Proposal>
                 <ProposalTitle>МИ ПРОПОНУЄМО ВАМ:</ProposalTitle>
+                <Text>види дозволів, які ми допоможемо зробити для вас</Text>
         </Proposal>
     </>    
     )

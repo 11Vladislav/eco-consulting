@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import backgroundImage from '../../img/cover.jpg';
 
 
+
 export const HomeContainer = styled.div`
   background-image: url(${backgroundImage});
   background-size: cover;
@@ -95,17 +96,18 @@ export const Proposal = styled.div`
     padding-top: 50px;
     background-color: #fff;
     width: 100%;
-    height: 250px;
-    border: 1px solid;
     @media (min-width: 768px) {
-        padding-top: 0;
+        padding: 100px 0 100px 0;
+        margin-left: 150px;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
+        flex-direction: column;
   }
 `;
 
 export const ProposalTitle = styled.h3`
+    margin-top: 45px;
     font-family: 'BanderaPro', sans-serif;
     font-size: 30px;
     text-align: center;
@@ -113,4 +115,15 @@ export const ProposalTitle = styled.h3`
     @media (min-width: 769px) {
         font-size: 35px;
   }
+`
+export const Text = styled.p`
+  font-size: 16px;
+  margin-top: 15px;
+  text-align: center;
+`
+
+export const List = styled.ul`
+  display: flex;
+  gap: 30px;
+  margin-top: 45px;
 `

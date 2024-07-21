@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import {MenuLink, Nav, Menu, MenuItem, Burger} from './NavBar.styled';
 import logo from './../../img/logo-2.jpg';
 import { FaBars, FaTimes } from 'react-icons/fa';
