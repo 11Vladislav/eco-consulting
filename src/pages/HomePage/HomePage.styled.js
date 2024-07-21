@@ -16,10 +16,19 @@ export const HomeContainer = styled.div`
 `;
 
 export const TitleContainer = styled.div`
-  margin-left: 150px;
+  margin-left: calc(10%);
+  
   margin-top: 150px;
-  max-width: 595px;
+  max-width: 327px;
 
+  @media (max-width: 768px) {
+    padding-right: 100px;
+  }
+  
+  @media (min-width: 769px) {
+
+    max-width: 595px;
+  }
 `;
 
 export const Title = styled.h1`
@@ -53,8 +62,10 @@ margin-top: 20px;
 
 export const ButtonContainer = styled.div`
     margin-top: 25px;
-    margin-left: 150px;
+    margin-left: 100px;
+    margin-left: calc(10%);
         @media (min-width: 768px) {
+            
             width: 300px;
             display: flex;
             align-items: center;
@@ -94,11 +105,14 @@ export const Button = styled.button`
 
 export const Proposal = styled.div`
     padding-top: 50px;
+    padding-bottom: 50px;
     background-color: #fff;
-    width: 100%;
+    max-width: 250px;
+    margin-left: calc(10%);
     @media (min-width: 768px) {
         padding: 100px 0 100px 0;
         margin-left: 150px;
+        width: 100%;
         display: flex;
         align-items: flex-start;
         justify-content: center;

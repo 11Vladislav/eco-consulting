@@ -54,6 +54,7 @@ export const Burger = styled.div`
 
   @media (max-width: 768px) {
     display: block;
+    font-size: 24px;
     position: absolute;
     right: 35px;
     font-size: 24px;

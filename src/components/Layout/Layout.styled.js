@@ -14,6 +14,7 @@ export const Header = styled.header`
     transition: 0.4s;
     width: 100%;
     background-color: #fff;
+    padding: 15px 0;
 
     > nav {
         display: flex;
