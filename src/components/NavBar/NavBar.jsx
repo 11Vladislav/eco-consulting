@@ -8,15 +8,23 @@ export const NavBar = () => {
 
     const [open, setOpen] = useState(false);
     
+     const handleToggle = () => {
+            setOpen(!open);
+  };
+
+     const handleClose = () => {
+        setOpen(false);
+  };
+    
     return (
         <Nav>
             <MenuLink to="/">
                 <img src={logo} alt='logo' width='220' height='104'/>
             </MenuLink>
-            <Burger onClick={() => setOpen(!open)}>
+            <Burger onClick={handleToggle}>
                     {open ? <FaTimes color="#000" /> : <FaBars color="#000" />}
             </Burger>
-            <Menu open={open}>
+            <Menu open={open} onClick={handleClose}>
                 <MenuItem>
                     <MenuLink to="/">Головна</MenuLink> 
                 </MenuItem>
