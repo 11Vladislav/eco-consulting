@@ -9,7 +9,6 @@ export const MenuLink = styled(NavLink)`
     font-weight: 500;
     font-size: 16px;
     text-decoration: none;
-    transform: scale(1);
     transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
     font-family: 'BanderaPro', sans-serif;
   &:hover {
