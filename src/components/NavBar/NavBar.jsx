@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import {MenuLink, Nav, Menu, MenuItem, Burger} from './NavBar.styled';
-import logo from './../../img/logo-2.jpg';
+import logo from './../../img/logo.png';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 
@@ -19,7 +19,7 @@ export const NavBar = () => {
     return (
         <Nav>
             <MenuLink to="/">
-                <img src={logo} alt='logo' width='220' height='104'/>
+                <img src={logo} alt='logo' width='174' height='84'/>
             </MenuLink>
             <Burger onClick={handleToggle}>
                     {open ? <FaTimes color="#000" /> : <FaBars color="#000" />}

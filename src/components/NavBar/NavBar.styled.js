@@ -17,6 +17,7 @@ export const MenuLink = styled(NavLink)`
 `
 
 export const Nav = styled.nav`
+  padding-left: 15px;
   height: 60px;
   display: flex;
   justify-content: space-between;
@@ -27,8 +28,10 @@ export const Nav = styled.nav`
 export const Menu = styled.ul`
   display: flex;
   list-style: none;
+  padding-left: 15px;
 
   @media (max-width: 768px) {
+    
     flex-direction: column;
     position: absolute;
     top: 60px;
