@@ -21,6 +21,7 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 100;
 `;
 
 export const Menu = styled.ul`

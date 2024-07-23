@@ -8,6 +8,7 @@ import {
     NavLink
 } from './Offers.styled';
 
+
 import airImg from './../../img/plant.png';
 import recycleImg from './../../img/recycle.png';
 import waterImg from './../../img/water.png';
