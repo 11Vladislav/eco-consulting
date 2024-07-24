@@ -18,7 +18,8 @@ export const MenuLink = styled(NavLink)`
 
 export const Nav = styled.nav`
   padding-left: 15px;
-  height: 60px;
+  padding-right: 15px;
+  height: 90px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,12 +30,14 @@ export const Menu = styled.ul`
   display: flex;
   list-style: none;
   padding-left: 15px;
+  align-items: center;
+ 
 
   @media (max-width: 768px) {
     
     flex-direction: column;
     position: absolute;
-    top: 60px;
+    top: 85px;
     left: ${({ open }) => (open ? '0' : '-100%')};
     width: 100%;
     background: #fff;
@@ -44,7 +47,7 @@ export const Menu = styled.ul`
 
 export const MenuItem = styled.li`
   margin: 0 10px;
-
+  max-height: 20px;
   @media (max-width: 768px) {
     text-align: center;
     padding: 10px;
@@ -64,4 +67,44 @@ export const Burger = styled.div`
     cursor: pointer;
     margin-right: auto;
   }
+`;
+
+export const Contacts = styled.ul`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  
+ 
+
+  @media (min-width: 768px) {
+    margin-left: 20px;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+     padding: 10px 0;
+     
+  }
+
+`;
+
+export const ContactItem = styled.li`
+  text-align: center;
+  @media (min-width: 768px) {
+      max-width: 150px;
+      max-height: 110px;
+    }
+`;
+
+export const ContactLink = styled.a`
+  color: #000;
+    &:hover {
+    color: #A1C935;
+  }
+`;
+
+export const Span = styled.span`
+  margin-left: 5px;
+  font-size: 18px;
+  font-weight: 600;
 `;

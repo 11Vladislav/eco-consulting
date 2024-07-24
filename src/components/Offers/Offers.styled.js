@@ -2,29 +2,30 @@ import styled from "styled-components";
 import { Link } from 'react-router-dom';
 
 export const ProposalContainer = styled.div`
-  margin-left: calc(10% - 25px);
+ 
   display: flex;
   flex-direction: column;
   justify-content: center;
-    @media (max-width: 767px){
-        display: block;
-    }
  
 `;
 
 export const Proposal = styled.div`
-    background-color: #fff; 
-    margin-left: calc(15%);
-    max-width: 419px;
+    display: flex;
+   
+    flex-direction: column;
+    background-color: #fff;
+    text-align: center;
+    
+    padding: 0 15px;
+    margin-left: calc(35%);
     
     @media (max-width: 767px){
-      max-width: 250px;
-      margin-left: calc(20%);
+   
+      margin-left: 0;
     }
 
     @media (min-width: 768px) {
-        
-        margin-left: calc(30%);
+   
         display: flex;
         align-items: flex-start;
         justify-content: center;

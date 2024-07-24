@@ -1,8 +1,10 @@
 import { useState } from 'react';
-import {MenuLink, Nav, Menu, MenuItem, Burger} from './NavBar.styled';
+import {MenuLink, Nav, Menu, MenuItem, Burger, Contacts, ContactItem, ContactLink, Span} from './NavBar.styled';
 import logo from './../../img/logo.png';
 import { FaBars, FaTimes } from 'react-icons/fa';
-
+import { PiMapPinDuotone } from "react-icons/pi";
+import { VscMail } from "react-icons/vsc";
+import { HiDevicePhoneMobile } from "react-icons/hi2";
 
 export const NavBar = () => {
 
@@ -43,7 +45,29 @@ export const NavBar = () => {
                 <MenuItem>
                     <MenuLink to="/contacts">Контакти</MenuLink> 
                 </MenuItem>
-             </Menu>
+                    <Contacts>
+                <ContactItem>        
+                        <PiMapPinDuotone width="22" height="22" />
+                        <Span>Працюємо</Span> по всій території України
+                </ContactItem>
+                <ContactItem>
+                    <ContactLink href='maito:info@eco-consulting.com.ua'>
+                            <VscMail width="22" height="22" />
+                            <Span>info@eco-consulting.com.ua</Span>
+                    </ContactLink>
+                        <br/>
+                             Працюємо 9:00 - 18:00
+                </ContactItem>
+                <ContactItem>
+                    <ContactLink href='tel:+38 (093) 833-42-80'>
+                            <HiDevicePhoneMobile width="22" height="22" />
+                            <Span>+38 (093) 833-42-80 </Span><br/>
+                    </ContactLink>
+                        Безкоштовна консультація
+                </ContactItem>
+            </Contacts>
+            </Menu>
+ 
         </Nav>
     )
 }
