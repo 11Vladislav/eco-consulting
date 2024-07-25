@@ -1,5 +1,5 @@
-import { Wrap, TitleContainer, Title, SubTitle, ButtonContainer, Button } from './HeroContent.styled';
-import { NavLink } from "react-router-dom";
+import { Wrap, TitleContainer, Title, SubTitle, ButtonContainer, Button, Link } from './HeroContent.styled';
+
 
 export const HeroContent = () => { 
 
@@ -11,10 +11,7 @@ export const HeroContent = () => {
                     <SubTitle>ВАШ НАДІЙНИЙ ПОМІЧНИК В СФЕРІ ЕКОЛОГІЇ З 2013 РОКУ</SubTitle>
                 </TitleContainer>
                 <ButtonContainer>
-                    <Button>
-                        <NavLink
-                        to="/services">Послуги</NavLink>
-                    </Button>
+                   <Link to="/services"><Button>Послуги</Button></Link> 
                     <Button>Ліцензії</Button>
                 </ButtonContainer>
             </Wrap>

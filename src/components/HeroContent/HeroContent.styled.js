@@ -1,4 +1,14 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
+
+export const Link = styled(NavLink)`
+   &:hover, &:focus {
+    color: #fff;
+
+   }
+
+`;
+
 
 
 export const Wrap = styled.div`
