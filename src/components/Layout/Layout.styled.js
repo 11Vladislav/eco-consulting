@@ -15,6 +15,7 @@ export const Header = styled.header`
     width: 100%;
     background-color: #fff;
     padding: 15px 0;
+    max-height: 115px;
 
     > nav {
         display: flex;

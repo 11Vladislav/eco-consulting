@@ -45,7 +45,7 @@ export const NavBar = () => {
                 <MenuItem>
                     <MenuLink to="/contacts">Контакти</MenuLink> 
                 </MenuItem>
-                    <Contacts>
+                            <Contacts>
                 <ContactItem>        
                         <PiMapPinDuotone width="22" height="22" />
                         <Span>Працюємо</Span> по всій території України
@@ -67,6 +67,7 @@ export const NavBar = () => {
                 </ContactItem>
             </Contacts>
             </Menu>
+
  
         </Nav>
     )

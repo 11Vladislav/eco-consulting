@@ -40,7 +40,7 @@ export const ProposalTitle = styled.h3`
     text-align: center;
     text-transform: uppercase;
     @media (min-width: 769px) {
-        font-size: 35px;
+        font-size: 36px;
   }
 `;
 export const Text = styled.p`

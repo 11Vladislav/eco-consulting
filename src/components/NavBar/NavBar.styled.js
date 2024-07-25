@@ -31,13 +31,15 @@ export const Menu = styled.ul`
   list-style: none;
   padding-left: 15px;
   align-items: center;
+
  
 
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     
     flex-direction: column;
     position: absolute;
-    top: 85px;
+    gap: 10px;
+    top: 100px;
     left: ${({ open }) => (open ? '0' : '-100%')};
     width: 100%;
     background: #fff;
@@ -48,7 +50,7 @@ export const Menu = styled.ul`
 export const MenuItem = styled.li`
   margin: 0 10px;
   max-height: 20px;
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     text-align: center;
     padding: 10px;
     width: 100%;
@@ -58,7 +60,7 @@ export const MenuItem = styled.li`
 export const Burger = styled.div`
   display: none;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     display: block;
     font-size: 24px;
     position: absolute;
@@ -73,14 +75,15 @@ export const Contacts = styled.ul`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 10px;
+  padding: 20px;
+  gap: 20px;
   
  
 
-  @media (min-width: 768px) {
+  @media (min-width: 1000px) {
     margin-left: 20px;
     flex-direction: row;
-    gap: 10px;
+    gap: 20px;
     justify-content: space-between;
      padding: 10px 0;
      
@@ -90,8 +93,8 @@ export const Contacts = styled.ul`
 
 export const ContactItem = styled.li`
   text-align: center;
-  @media (min-width: 768px) {
-      max-width: 150px;
+  @media (min-width: 1000px) {
+      max-width: 200px;
       max-height: 110px;
     }
 `;
@@ -107,4 +110,8 @@ export const Span = styled.span`
   margin-left: 5px;
   font-size: 18px;
   font-weight: 600;
+`;
+
+export const Contactss = styled.ul`
+  display: none;
 `;

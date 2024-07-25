@@ -2,8 +2,6 @@ import styled from "styled-components";
 
 
 export const Wrapper = styled.div`
-
-    height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -11,9 +9,6 @@ export const Wrapper = styled.div`
     font-family: 'BanderaPro', sans-serif;
     background: rgb(144,143,150);
     background: linear-gradient(90deg, rgba(144,143,150,1) 2%, rgba(221,221,221,1) 100%, rgba(0,212,255,1) 100%);
-    @media (max-width: 767px) {
-        height: 140vh;
-     }
 `;
 
 export const Title = styled.h2`

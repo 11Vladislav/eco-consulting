@@ -1,11 +1,16 @@
 import styled from "styled-components";
 
+
 export const Wrap = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 10%;
+  margin-top: 10%;
      @media (max-width: 768px) {
+      margin-left: 0;
+     
        align-items: center;
+       justify-content: center;
      }
 `;
 

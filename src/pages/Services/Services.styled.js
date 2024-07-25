@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Title = styled.h2`
     color: #A1C935;
-    margin-top: 100px;
+    margin-top: 130px;
     @media (max-width: 768px) {
         max-width: 300px;
     }
