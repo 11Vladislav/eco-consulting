@@ -14,7 +14,7 @@ export const Wrapper = styled.ul`
     display: flex;
     flex-direction: row;
     gap: 10px;
-   
+
 `;
 
 export const StageContainer = styled.li`
@@ -49,7 +49,6 @@ export const Description = styled.p`
 
 export const Text = styled.div`
   overflow: hidden;
-
   max-width: 300px;
   max-height: ${(props) => (props.visible ? '200px' : '0')};
   transition: max-height 0.5s ease-out;

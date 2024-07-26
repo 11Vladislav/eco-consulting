@@ -1,4 +1,4 @@
-import { Title, Wrap, SubTitle } from "./HowWork.styled";
+import { Title, Wrap, SubTitle, Container } from "./HowWork.styled";
 import { Stage } from './Stage';
 
 const stages = [
@@ -32,22 +32,17 @@ const stages = [
   },
 ];
 
-
-
-
 export const HowWork = () => {
-
     return (
-        <>
+        <Container>
             <Title>Як ми працюємо?</Title>
             <SubTitle>Етапи нашої співпраці з клієнтами</SubTitle>
         <Wrap>
-
            {stages.map((stage, index) => (
         <Stage key={index} stage={stage} />
       ))}
         </Wrap>
-        </>
+        </Container>
     );
 
 };

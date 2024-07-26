@@ -8,9 +8,17 @@ import {
     ListItem,
     Span,
     ListText,
+    CircularContainer
 } from "./About.styled";
 
-// import { Charts } from 'components/Сharts/Charts';
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+
+const data = [
+  { percentage: 96, text: "СВІТОВИХ ВОД  забруднені людиною", color: "#ce2b2b" },
+  { percentage: 80, text: "ІНФЕКЦІЙ передаються через воду", color: "#779f07" },
+  { percentage: 7, text: "ТЕРИТОРІЇ УКРАЇНИ займають звалища та смітники", color: "#0000ff" },
+  { percentage: 50, text: "МІСТ У СВІТІ з підвищеним забрудненням повітря", color: "#b67e17" },
+];
 
 export const About = () => {
 
@@ -27,25 +35,26 @@ export const About = () => {
                     консультування з бездоганним розумінням діючого законодавства.
                     Ми націлені на якість роботи.</Text>
                 <List>
-                    <ListItem>
-                        <Span>96% СВІТОВИХ ВОД</Span>
-                        <ListText>забруднені людиною</ListText>
+                    {data.map((item, index) => (
+                        <ListItem key={index}>
+                        <CircularContainer>    
+                            <CircularProgressbar 
+                                value={item.percentage}
+                                text={`${item.percentage}%`}
+                                styles={buildStyles({    
+                                pathTransitionDuration: 0.5,
+                                rotation: 0.25,
+                                textColor: item.color,
+                                pathColor: item.color,
+                                trailColor: '#d6d6d6',
+                            })}
+                                    />
+                        </CircularContainer>
+                        <ListText>{item.text}</ListText>
                     </ListItem>
-                    <ListItem>
-                        <Span>80% ІНФЕКЦІЙ</Span>
-                        <ListText>передаються через воду</ListText>
-                    </ListItem>
-                    <ListItem>
-                        <Span>7% ТЕРИТОРІЇ УКРАЇНИ</Span>
-                        <ListText>займають звалища та смітники</ListText>
-                    </ListItem>
-                    <ListItem>
-                        <Span>50% МІСТ У СВІТІ</Span>
-                        <ListText>з підвищеним забрудненням повітря</ListText>
-                    </ListItem>                    
-                </List>
-                {/* <Charts /> */}
-        </Wrapper>
+                    ))}
+                </List>  
+            </Wrapper>
             
         </>
 )}

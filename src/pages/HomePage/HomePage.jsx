@@ -3,6 +3,8 @@ import { HeroContent } from 'components/HeroContent/HeroContent';
 import { Offers } from 'components/Offers/Offers';
 import { About } from 'components/About/About';
 import { HowWork } from 'components/HowWork/HowWork';
+import { ConsultationForm } from 'components/ConsultationForm/ConsultationForm';
+import { Footer } from 'components/Footer/Footer';
 
 
 
@@ -16,7 +18,9 @@ export const HomePage = () => {
         </HomeContainer>
             <Offers />
             <About />
-            <HowWork/>
+            <HowWork />
+            <ConsultationForm />
+            <Footer/>
     </>    
     )
 }

@@ -5,6 +5,10 @@ const slideIn = keyframes`
   100% { transform: translateY(0); }
 `;
 
+export const Container = styled.div`
+  
+`;
+
 export const Wrap = styled.div`
     display: flex;
     justify-content: center;
@@ -16,8 +20,6 @@ export const Wrap = styled.div`
         flex-direction: column;
   }
 `;
-
-
 
 export const Title = styled.h2`
     font-size: 30px;
