@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import backgroundImage from '../../img/cover.jpg';
+import backgroundImageMin from '../../img/cover-min.jpg'
 
 
 
@@ -15,5 +16,7 @@ export const HomeContainer = styled.div`
   flex-direction: column;
   @media (max-width: 767px){
     align-items: center;
+    background-image: url(${backgroundImageMin});
+    background-position: center;
   }
 `;

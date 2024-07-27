@@ -6,7 +6,6 @@ export const FooterContainer = styled.footer`
   color: #aaa;
   display: flex;
   justify-content: space-around;
-  align-items: center;
   gap: 10px;
   padding: 45px;
   flex-wrap: wrap;
