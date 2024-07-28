@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import { NavLink } from "react-router-dom";
 
+
 export const MenuLink = styled(NavLink)`
     border-radius: 4px;
     text-decoration: none;
@@ -115,3 +116,12 @@ export const Span = styled.span`
 export const Contactss = styled.ul`
   display: none;
 `;
+
+export const NavItem = styled.div`
+  @media screen and (max-width: 768px) {
+    padding: 10px 0;
+    text-align: center;
+  }
+`;
+
+

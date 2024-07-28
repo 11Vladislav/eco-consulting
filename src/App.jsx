@@ -36,7 +36,6 @@ export const App = () => {
 
   return (
    <>
-  
       <Routes>
         <Route path='/' element={<Layout />}>
         <Route index path="/" element={<HomePage />} />

@@ -1,28 +1,42 @@
 import { useState } from 'react';
-import {MenuLink, Nav, Menu, MenuItem, Burger, Contacts, ContactItem, ContactLink, Span} from './NavBar.styled';
+import {
+    MenuLink,
+    Nav,
+    Menu,
+    MenuItem,
+    Burger,
+    Contacts,
+    ContactItem,
+    ContactLink,
+    Span,
+
+} from './NavBar.styled';
 import logo from './../../img/logo.png';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { PiMapPinDuotone } from "react-icons/pi";
 import { VscMail } from "react-icons/vsc";
 import { HiDevicePhoneMobile } from "react-icons/hi2";
 
+
+// import { Submenu } from 'components/Submenu/Submenu';
+
 export const NavBar = () => {
 
     const [open, setOpen] = useState(false);
-    
      const handleToggle = () => {
             setOpen(!open);
   };
-
      const handleClose = () => {
         setOpen(false);
-  };
+    };
     
+  
     return (
         <Nav>
             <MenuLink to="/">
                 <img src={logo} alt='logo' width='174' height='84'/>
             </MenuLink>
+         
             <Burger onClick={handleToggle}>
                     {open ? <FaTimes color="#000" /> : <FaBars color="#000" />}
             </Burger>
@@ -31,7 +45,7 @@ export const NavBar = () => {
                     <MenuLink to="/">Головна</MenuLink> 
                 </MenuItem>
                 <MenuItem>
-                    <MenuLink to="/services">Послуги</MenuLink> 
+                    <MenuLink to="/services">Послуги</MenuLink>
                 </MenuItem>
                 <MenuItem>
                     <MenuLink to="/law">Законодавство</MenuLink>
