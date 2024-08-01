@@ -1,14 +1,21 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-    height: 1500px;
-    max-width: 825px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 150px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px 25px;
+    margin-bottom: 15px;
+    background: #fff;
+
 `;
 
 
+
 export const Title = styled.h2`
+    margin-top: 200px;
     color: #A1C935;
     margin-top: 30px;
     font-size: 32px;
@@ -28,7 +35,7 @@ export const Text = styled.p`
 export const TextAttention = styled.h3`
     margin-top: 20px;
     font-family: 'BanderaPro', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
 `;
 
@@ -36,7 +43,7 @@ export const Paragraph = styled.h3`
     margin-top: 20px;
     font-family: 'BanderaPro', sans-serif;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     color: #A1C935;
      &:hover {
         color: #000;
@@ -46,6 +53,7 @@ export const Paragraph = styled.h3`
 
 export const Textblock = styled.div`
     margin-top: 50px;
+   
 `;
 
 export const List = styled.ul`

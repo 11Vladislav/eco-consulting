@@ -1,12 +1,14 @@
 import { Title, Wrapper, Text, TextAttention, Paragraph, Textblock, List, Listitem  } from './Services.styled';
 import ServiceImg from '../../img/Poslugi_kompanii-1.jpg';
 import { ConsultationForm } from 'components/ConsultationForm/ConsultationForm';
+import { Footer } from 'components/Footer/Footer';
 
 export const Services = () => {
 
     return (
-            <Wrapper>
-                <img src={ServiceImg} alt='service img' height='458' width='825'/>
+        <>
+        <Wrapper>
+                <img src={ServiceImg} alt='service img' height='458' width='1000'/>
                 <Title>Перелік послуг ТОВ «Екологічний консалтинг»</Title>
                 <Text>Під екологічним консалтингом мається на увазі цілий комплекс робіт,
                     необхідних для забезпечення правильної діяльності підприємств будь-яких галузей.
@@ -33,14 +35,14 @@ export const Services = () => {
                     ступінь небезпеки будь-якого виду для навколишнього середовища і
                     здоров’я людей, а також дають рекомендації щодо їх усунення і профілактики.
                 </Text>
-                <Paragraph>Розробка розділу (ОВНС)</Paragraph>
+                <Paragraph>4. Розробка розділу (ОВНС)</Paragraph>
                 <Text>Мета проведення ОВНС – розробка необхідних заходів
                     щодо попередження шкідливої ​​дії планової господарської діяльності
                     на навколишнє середовище або мінімізація такого впливу
                     при неможливості його повного усунення. ОВНС проводиться
                     на етапі проектування, ще до початку будівництва об’єкта.
                 </Text>
-                <Paragraph> Реєстрація декларації про відходи</Paragraph>
+                <Paragraph>5. Реєстрація декларації про відходи</Paragraph>
                 <Text>Документ подається один раз на рік через електронну систему,
                     якщо діяльність суб’єкта господарювання призводить до утворення небезпечних відходів
                     або власників відходів, що не є небезпечними,
@@ -75,8 +77,11 @@ export const Services = () => {
                     прийме вашу заявку.
                 </Text>
                 </Textblock>
-                <ConsultationForm />
-            </Wrapper>
+           
+        </Wrapper>
+         <ConsultationForm />
+            <Footer />
+            </>
     )
 
 
