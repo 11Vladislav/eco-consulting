@@ -29,12 +29,11 @@ export const NavBar = () => {
      const handleClose = () => {
         setOpen(false);
     };
-    
-  
+
     return (
         <Nav>
             <MenuLink to="/">
-                <img src={logo} alt='logo' width='174' height='84'/>
+                <img src={logo} alt='logo' width='104' height='84'/>
             </MenuLink>
          
             <Burger onClick={handleToggle}>
@@ -51,7 +50,7 @@ export const NavBar = () => {
                     <MenuLink to="/law">Законодавство</MenuLink>
                 </MenuItem>
                 <MenuItem>
-                    <MenuLink to="/about">Про нас</MenuLink>
+                    <MenuLink to="/companyabout">Про нас</MenuLink>
                 </MenuItem>
                 <MenuItem>
                     <MenuLink to="/licenses">Ліцензії</MenuLink>

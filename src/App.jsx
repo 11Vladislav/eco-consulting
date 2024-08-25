@@ -3,6 +3,8 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import { Layout } from "./components/Layout/Layout";
 import { HomePage } from "./pages/HomePage/HomePage";
 import { Services } from "./pages/Services/Services";
+import { Law } from 'pages/Law/Law';
+import { CompanyAbout } from 'pages/CompanyAbout/CompanyAbout';
 import { ScrollToTopButton } from './App.styled';
 import { FaArrowUp } from 'react-icons/fa';
 
@@ -32,14 +34,14 @@ export const App = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-
-
   return (
    <>
       <Routes>
         <Route path='/' element={<Layout />}>
         <Route index path="/" element={<HomePage />} />
-        <Route path="services" element={<Services />} />
+          <Route path="services" element={<Services />} />
+          <Route path="law" element={<Law />} />
+          <Route path="companyabout" element={<CompanyAbout />} />
           <Route path="*" element={<Navigate replace to="/" />} />
         </Route> 
       </Routes> 

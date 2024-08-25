@@ -18,11 +18,10 @@ export const MenuLink = styled(NavLink)`
 `
 
 export const Nav = styled.nav`
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
   height: 90px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   z-index: 100;
 `;
@@ -30,7 +29,7 @@ export const Nav = styled.nav`
 export const Menu = styled.ul`
   display: flex;
   list-style: none;
-  padding-left: 15px;
+  padding-left: 5px;
   align-items: center;
 
  
@@ -84,7 +83,7 @@ export const Contacts = styled.ul`
   @media (min-width: 1000px) {
     margin-left: 20px;
     flex-direction: row;
-    gap: 20px;
+    gap: 5px;
     justify-content: space-between;
      padding: 10px 0;
      
@@ -101,6 +100,7 @@ export const ContactItem = styled.li`
 `;
 
 export const ContactLink = styled.a`
+  font-size: 14px;
   color: #000;
     &:hover {
     color: #A1C935;
@@ -109,7 +109,7 @@ export const ContactLink = styled.a`
 
 export const Span = styled.span`
   margin-left: 5px;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 600;
 `;
 
