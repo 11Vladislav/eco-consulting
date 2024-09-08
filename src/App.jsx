@@ -7,6 +7,7 @@ import { Law } from 'pages/Law/Law';
 import { CompanyAbout } from 'pages/CompanyAbout/CompanyAbout';
 import { ScrollToTopButton } from './App.styled';
 import { FaArrowUp } from 'react-icons/fa';
+import { Licenses } from 'pages/Licenses/Licenses';
 
 
 
@@ -16,7 +17,7 @@ export const App = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.pageYOffset > 300) {
+      if (window.scrollY > 300) {
         setShowButton(true);
       } else {
         setShowButton(false);
@@ -42,6 +43,7 @@ export const App = () => {
           <Route path="services" element={<Services />} />
           <Route path="law" element={<Law />} />
           <Route path="companyabout" element={<CompanyAbout />} />
+          <Route path="licenses" element={<Licenses/>} />
           <Route path="*" element={<Navigate replace to="/" />} />
         </Route> 
       </Routes> 
