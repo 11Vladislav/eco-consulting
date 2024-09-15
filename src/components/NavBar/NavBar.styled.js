@@ -83,7 +83,7 @@ export const Contacts = styled.ul`
   @media (min-width: 1000px) {
     margin-left: 20px;
     flex-direction: row;
-    gap: 5px;
+    gap: 35px;
     justify-content: space-between;
      padding: 10px 0;
      
@@ -94,7 +94,7 @@ export const Contacts = styled.ul`
 export const ContactItem = styled.li`
   text-align: center;
   @media (min-width: 1000px) {
-      max-width: 200px;
+      max-width: 350px;
       max-height: 110px;
     }
 `;

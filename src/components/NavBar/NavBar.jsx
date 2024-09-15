@@ -61,7 +61,7 @@ export const NavBar = () => {
                             <Contacts>
                 <ContactItem>        
                         <PiMapPinDuotone width="22" height="22" />
-                        <Span>Працюємо</Span> по всій території України
+                        <Span>Працюємо</Span> по всій<br/> території України
                 </ContactItem>
                 <ContactItem>
                     <ContactLink href='maito:info@eco-consulting.com.ua'>
