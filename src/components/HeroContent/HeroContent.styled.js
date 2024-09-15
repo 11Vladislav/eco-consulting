@@ -56,7 +56,7 @@ margin-top: 20px;
 
   @media (max-width: 768px) {
     font-size: 18px;
-    color: #A1C935;
+    color: #ccc;
   }
 
   @media (min-width: 769px) {

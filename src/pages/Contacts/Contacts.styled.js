@@ -7,6 +7,7 @@ export const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
     padding-top: 125px;
     padding-left: 15px;
     padding-right: 15px;
@@ -31,10 +32,12 @@ export const Title = styled.h2`
 export const ContactsBlock = styled.ul`
     margin-top: 50px;
     display: flex;
-   max-width: 1000px;
+    max-width: 1000px;
     gap: 15px;
     justify-content: space-between;
-    
+    @media (max-width: 768px) {
+        display: block;
+    }
 `;
 
 export const ContactItem = styled.li`
@@ -52,13 +55,13 @@ export const ContactTitle = styled.h3`
 
 export const ContactText = styled.p`
     margin-top: 15px;
+    margin-bottom: 15px;
      font-size: 18px;
      color: #A1C935;
     font-family: 'BanderaPro', sans-serif;
      transition: color 0.3s, transform 0.3s;
 
     &:hover {
-
         color: #000;
     }
 `;
