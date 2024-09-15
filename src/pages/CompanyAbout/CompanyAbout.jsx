@@ -49,7 +49,7 @@ export const CompanyAbout = () => {
                 <Text>
                     Давайте будувати його разом тут і зараз!
                 </Text>
-                  <img src={AboutImg} alt='about img' height='458' width='1000'/>
+                  <img src={AboutImg} alt='about img' height='458' width='1200'/>
             </Wrapper>
           
             <Footer />

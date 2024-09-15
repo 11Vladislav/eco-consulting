@@ -8,6 +8,7 @@ import { CompanyAbout } from 'pages/CompanyAbout/CompanyAbout';
 import { ScrollToTopButton } from './App.styled';
 import { FaArrowUp } from 'react-icons/fa';
 import { Licenses } from 'pages/Licenses/Licenses';
+import { Contacts } from 'pages/Contacts/Contacts';
 
 
 
@@ -43,7 +44,8 @@ export const App = () => {
           <Route path="services" element={<Services />} />
           <Route path="law" element={<Law />} />
           <Route path="companyabout" element={<CompanyAbout />} />
-          <Route path="licenses" element={<Licenses/>} />
+          <Route path="licenses" element={<Licenses />} />
+          <Route path="contacts" element={<Contacts/>} />
           <Route path="*" element={<Navigate replace to="/" />} />
         </Route> 
       </Routes> 

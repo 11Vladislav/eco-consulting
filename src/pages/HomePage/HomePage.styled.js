@@ -17,6 +17,6 @@ export const HomeContainer = styled.div`
   @media (max-width: 767px){
     align-items: center;
     background-image: url(${backgroundImageMin});
-    background-position: center;
+    background-position: top;
   }
 `;

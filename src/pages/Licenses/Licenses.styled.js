@@ -5,4 +5,7 @@ export const Wrap = styled.div`
     gap: 12px;
     align-items: center;
     justify-content: center;
+    @media (max-width: 768px) {
+        display: block;
+    }
 `;
