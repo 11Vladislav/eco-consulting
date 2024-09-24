@@ -12,7 +12,7 @@ export const HeroContent = () => {
                 </TitleContainer>
                 <ButtonContainer>
                    <Link to="/services"><Button>Послуги</Button></Link> 
-                    <Button>Ліцензії</Button>
+                    <Link to="/licenses"><Button>Ліцензії</Button></Link>
                 </ButtonContainer>
             </Wrap>
         </>
