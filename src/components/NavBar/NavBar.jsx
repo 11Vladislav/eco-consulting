@@ -9,6 +9,8 @@ import {
     ContactItem,
     ContactLink,
     Span,
+    ContactMail,
+    ItemText
 
 } from './NavBar.styled';
 import logo from './../../img/logo.png';
@@ -17,8 +19,6 @@ import { PiMapPinDuotone } from "react-icons/pi";
 import { VscMail } from "react-icons/vsc";
 import { HiDevicePhoneMobile } from "react-icons/hi2";
 
-
-// import { Submenu } from 'components/Submenu/Submenu';
 
 export const NavBar = () => {
 
@@ -33,7 +33,7 @@ export const NavBar = () => {
     return (
         <Nav>
             <MenuLink to="/">
-                <img src={logo} alt='logo' width='104' height='84'/>
+                <img src={logo} alt='logo' width='124' height='84'/>
             </MenuLink>
          
             <Burger onClick={handleToggle}>
@@ -64,15 +64,15 @@ export const NavBar = () => {
                         <Span>Працюємо</Span> по всій<br/> території України
                 </ContactItem>
                 <ContactItem>
-                    <ContactLink href='maito:info@eco-consulting.com.ua'>
+                    <ContactMail as="a"  href="mailto:info@www.eco-consulting.com.ua">
                             <VscMail width="22" height="22" />
-                            <Span>info@eco-consulting.com.ua</Span>
-                    </ContactLink>
-                        <br/>
+                            <ItemText>info@www.eco-consulting.com.ua</ItemText>
+                    </ContactMail>
+
                              Працюємо 9:00 - 18:00
                 </ContactItem>
                 <ContactItem>
-                    <ContactLink href='tel:+38 (093) 833-42-80'>
+                    <ContactLink as="a" href='tel:+38 (093) 833-42-80'>
                             <HiDevicePhoneMobile width="22" height="22" />
                             <Span>+38 (093) 833-42-80 </Span><br/>
                     </ContactLink>

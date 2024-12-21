@@ -99,6 +99,17 @@ export const ContactItem = styled.li`
     }
 `;
 
+export const ContactMail = styled.div`
+  display: flex;
+    align-items: center;
+  cursor: pointer;
+    font-size: 14px;
+    color: #000;
+    &:hover {
+    color: #A1C935;
+    }
+`
+
 export const ContactLink = styled.a`
   font-size: 14px;
   color: #000;
@@ -125,3 +136,8 @@ export const NavItem = styled.div`
 `;
 
 
+export const ItemText = styled.div`
+  margin-left: 5px;
+  font-size: 14px;
+  font-weight: 600;
+`;
