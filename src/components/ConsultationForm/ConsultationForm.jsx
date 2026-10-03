@@ -42,7 +42,7 @@ export const ConsultationForm = () => {
     <FormContainer>
       <FormTitle>Безкоштовна консультація фахівця</FormTitle>
       <Form onSubmit={formik.handleSubmit}>
-        <label htmlFor="name">Им*я</label>
+        
         <Input
           type="text"
           name="name"
@@ -55,7 +55,6 @@ export const ConsultationForm = () => {
           <Error>{formik.errors.name}</Error>
         ) : null}
 
-          <label htmlFor="phone">Телефон</label>
         <Input
           id="phone"
           name="phone"
@@ -69,7 +68,6 @@ export const ConsultationForm = () => {
           <Error>{formik.errors.name}</Error>
         ) : null}
 
-        <label htmlFor="email">Email</label>
         <Input
          id="email"
           name="email"
@@ -83,7 +81,6 @@ export const ConsultationForm = () => {
           <Error>{formik.errors.email}</Error>
         ) : null}
 
-        <label htmlFor="message">Повідомлення</label>
         <TextArea
           id="message"
           name="message"

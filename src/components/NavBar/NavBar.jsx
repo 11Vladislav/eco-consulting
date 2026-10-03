@@ -1,19 +1,10 @@
 import { useState } from 'react';
 import {
-    MenuLink,
-    Nav,
-    Menu,
-    MenuItem,
-    Burger,
-    Contacts,
-    ContactItem,
-    ContactLink,
-    Span,
-    ContactMail,
-    ItemText
-
+    MenuLink, Nav, NavRow, Menu, MenuItem, Burger, Drawer,
+    Contacts, ContactItem, ContactLink, Span, ContactMail, ItemText
 } from './NavBar.styled';
-import logo from './../../img/logo.png';
+
+import logo from './../../img/logo-2.jpg';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { PiMapPinDuotone } from "react-icons/pi";
 import { VscMail } from "react-icons/vsc";
@@ -32,17 +23,39 @@ export const NavBar = () => {
 
     return (
         <Nav>
-            <MenuLink to="/">
-                <img src={logo} alt='logo' width='124' height='84'/>
-            </MenuLink>
-         
-            <Burger onClick={handleToggle}>
-                    {open ? <FaTimes color="#000" /> : <FaBars color="#000" />}
-            </Burger>
-            <Menu open={open} onClick={handleClose}>
-                <MenuItem>
-                    <MenuLink to="/">Головна</MenuLink> 
-                </MenuItem>
+            
+            <NavRow>
+                <MenuLink to="/">
+                    <img src={logo} alt='logo' width='124' height='84'/>
+                </MenuLink>
+            
+                <Burger onClick={handleToggle}>
+                        {open ? <FaTimes color="#000" /> : <FaBars color="#000" />}
+                </Burger>
+            </NavRow>
+     
+            <Drawer $open={open}>
+                <Contacts>
+                    <ContactItem>        
+                        <PiMapPinDuotone width="28" height="22" />
+                        Працюємо по всій Україні &nbsp;&nbsp;9:00 - 18:00
+                    </ContactItem>
+                    <ContactItem>
+                        <ContactMail as="a"  href="mailto:info@www.eco-consulting.com.ua">
+                               <VscMail width="28" height="28" />
+                                <ItemText>info@www.eco-consulting.com.ua</ItemText>
+                        </ContactMail>
+                                        
+                    </ContactItem>
+                    <ContactItem>
+                        <ContactLink as="a" href='tel:+38 (093) 833-42-80'>
+                                <HiDevicePhoneMobile width="22" height="22" />
+                                <Span>+38 (093) 833-42-80 </Span>&nbsp;&nbsp;
+                        </ContactLink>Безкоштовна консультація
+                        
+                    </ContactItem>
+                </Contacts>
+            <Menu  onClick={handleClose}>
                 <MenuItem>
                     <MenuLink to="/services">Послуги</MenuLink>
                 </MenuItem>
@@ -58,30 +71,10 @@ export const NavBar = () => {
                 <MenuItem>
                     <MenuLink to="/contacts">Контакти</MenuLink> 
                 </MenuItem>
-                            <Contacts>
-                <ContactItem>        
-                        <PiMapPinDuotone width="22" height="22" />
-                        <Span>Працюємо</Span> по всій<br/> території України
-                </ContactItem>
-                <ContactItem>
-                    <ContactMail as="a"  href="mailto:info@www.eco-consulting.com.ua">
-                            <VscMail width="22" height="22" />
-                            <ItemText>info@www.eco-consulting.com.ua</ItemText>
-                    </ContactMail>
 
-                             Працюємо 9:00 - 18:00
-                </ContactItem>
-                <ContactItem>
-                    <ContactLink as="a" href='tel:+38 (093) 833-42-80'>
-                            <HiDevicePhoneMobile width="22" height="22" />
-                            <Span>+38 (093) 833-42-80 </Span><br/>
-                    </ContactLink>
-                        Безкоштовна консультація
-                </ContactItem>
-            </Contacts>
             </Menu>
-
- 
+  
+            </Drawer>
         </Nav>
     )
 }
