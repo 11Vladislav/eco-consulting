@@ -15,6 +15,7 @@ export const Wrapper = styled.div`
 `;
 
 
+
 export const Title = styled.h2`
     margin-top: 10%;
     margin-bottom: 50px;
@@ -47,6 +48,7 @@ export const ContactItem = styled.li`
 `;
 
 export const ContactTitle = styled.h3`
+    margin-top: 15px;
     margin-bottom: 15px;
     font-size: 26px;
     font-weight: 600;
@@ -54,13 +56,11 @@ export const ContactTitle = styled.h3`
 `;
 
 export const ContactText = styled.p`
-    margin-top: 15px;
-    margin-bottom: 15px;
      font-size: 18px;
      color: #A1C935;
     font-family: 'BanderaPro', sans-serif;
      transition: color 0.3s, transform 0.3s;
-
+    margin-top: 15px;
     &:hover {
         color: #000;
     }
@@ -68,4 +68,19 @@ export const ContactText = styled.p`
 
 export const Span = styled.span`
   color: #000;
+`;
+
+export const AddressLink = styled(ContactText)`
+    cursor: pointer;
+`;
+
+export const Picture = styled.picture`
+    display: block;
+    width: 100%;
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;      /* пропорции сохраняются, картинка не растягивается */
+    }
 `;

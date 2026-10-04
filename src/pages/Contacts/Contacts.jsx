@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import ContactsImg from '../../img/contacts-2.jpg';
-import { Wrapper, Title, ContactsBlock, ContactItem, ContactTitle, ContactText, Span } from './Contacts.styled';
+import ContactsImgMob from '../../img/contacts-mob.png';
+import { Wrapper, Title, ContactsBlock, ContactItem, ContactTitle, ContactText, Span, AddressLink, Picture } from './Contacts.styled';
 import { GiVibratingSmartphone } from "react-icons/gi";
 import { PiMapPinAreaFill } from "react-icons/pi";
 import { MdAlternateEmail } from "react-icons/md";
@@ -7,20 +9,30 @@ import { ConsultationForm } from 'components/ConsultationForm/ConsultationForm';
 import { Footer } from 'components/Footer/Footer';
 
 
-export const Contacts = () => { 
+export const Contacts = () => {
+    const [mapTrigger, setMapTrigger] = useState(0);
+    const handleAddressClick = () => setMapTrigger((n) => n + 1);
 
     return (
         <>
         <Wrapper>
             <Title>ТОВ “Екологічний консалтинг”</Title>
-            <img src={ContactsImg} alt='contacts' height='258' width='1000' />
+            <Picture>
+                <source media="(max-width: 768px)" srcSet={ContactsImgMob} />
+                <img src={ContactsImg} alt="contacts img" width="1000" height="458" />
+            </Picture>
             <ContactsBlock>
-                    <ContactItem>
-                        <ContactTitle>Адреса: </ContactTitle>
+                        <ContactItem>
+                            <ContactTitle>Адреса: </ContactTitle>
                             <PiMapPinAreaFill size={50} />
-                            <ContactText><ContactText><Span>м. Київ,
-                                вул. Деревообробна, 3 В</Span></ContactText>
-                            </ContactText>
+                            <AddressLink
+                                role="button"
+                                tabIndex={0}
+                                onClick={handleAddressClick}
+                                onKeyDown={(e) => e.key === 'Enter' && handleAddressClick()}
+                            >
+                                <ContactText>м. Київ, вул. Деревообробна, 3 В</ContactText>
+                            </AddressLink>
                     </ContactItem>
                     <ContactItem>
                      <ContactTitle>Телефон: </ContactTitle>
@@ -41,7 +53,7 @@ export const Contacts = () => {
             </ContactsBlock>
         </Wrapper> 
             <ConsultationForm />
-            <Footer/>
+            <Footer mapTrigger={mapTrigger} />
             </>
     )
 }

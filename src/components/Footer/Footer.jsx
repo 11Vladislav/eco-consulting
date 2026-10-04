@@ -1,14 +1,25 @@
-import { useState } from 'react';
-
+import { useState, useEffect, useRef } from 'react';
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 import { FooterContainer, FooterItem, Icon, MapFrame, ItemText } from './Footer.styled';
 
-
-export const Footer = () => {
+export const Footer = ({ mapTrigger = 0 }) => {
   const [showMap, setShowMap] = useState(false);
+  const footerRef = useRef(null);
+
+  useEffect(() => {
+    if (!mapTrigger) return;          // 0 = страница не просила открывать карту
+    setShowMap(true);
+
+    // небольшая задержка, чтобы карта успела отрисоваться и футер стал выше
+    const timer = setTimeout(() => {
+      footerRef.current?.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, [mapTrigger]);
 
   return (
-    <FooterContainer>
+    <FooterContainer ref={footerRef}>
       <FooterItem onClick={() => setShowMap(!showMap)}>
         <Icon>
           <FaMapMarkerAlt />
