@@ -38,7 +38,7 @@ export const NavBar = () => {
                 <Contacts>
                     <ContactItem>        
                         <PiMapPinDuotone width="28" height="22" />
-                        Працюємо по всій Україні &nbsp;&nbsp;9:00 - 18:00
+                        Працюємо по всій Україні &nbsp;9:00 - 18:00
                     </ContactItem>
                     <ContactItem>
                         <ContactMail as="a"  href="mailto:info@www.eco-consulting.com.ua">

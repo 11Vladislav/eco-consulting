@@ -1,5 +1,19 @@
 import styled from "styled-components";
 
+
+
+export const Picture = styled.picture`
+    display: block;
+    width: 100%;
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;      /* пропорции сохраняются, картинка не растягивается */
+    }
+`;
+
+
 export const Wrapper = styled.div`
     max-width: 1200px;
     margin: 0 auto;

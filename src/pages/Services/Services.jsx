@@ -1,5 +1,6 @@
-import { Title, Wrapper, Text, TextAttention, Paragraph, Textblock, List, Listitem  } from './Services.styled';
-import ServiceImg from '../../img/Poslugi_kompanii-1.jpg';
+import { Title, Wrapper, Text, TextAttention, Paragraph, Textblock, List, Listitem, Picture  } from './Services.styled';
+import ServiceImg from '../../img/laptop-2.jpg';
+import ServiceImgMob from '../../img/laptop-3.jpg';
 import { ConsultationForm } from 'components/ConsultationForm/ConsultationForm';
 import { Footer } from 'components/Footer/Footer';
 
@@ -8,7 +9,10 @@ export const Services = () => {
     return (
         <>
         <Wrapper>
-                <img src={ServiceImg} alt='service img' height='458' width='1000'/>
+                <Picture>
+                     <source media="(max-width: 768px)" srcSet={ServiceImgMob} />
+                     <img src={ServiceImg} alt="service img" width="1000" height="458" />
+                </Picture>
                 <Title>Перелік послуг ТОВ «Екологічний консалтинг»</Title>
                 <Text>Під екологічним консалтингом мається на увазі цілий комплекс робіт,
                     необхідних для забезпечення правильної діяльності підприємств будь-яких галузей.

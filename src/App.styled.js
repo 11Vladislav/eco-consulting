@@ -14,7 +14,7 @@ export const ScrollToTopButton = styled.button`
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #007bff;
+  background-color: #A1C935;
   color: white;
   border: none;
   border-radius: 50%;
@@ -24,7 +24,7 @@ export const ScrollToTopButton = styled.button`
   animation: ${scrollToTopButton} 0.3s ease-in-out;
 
   &:hover {
-    background-color: #0056b3;
+    background-color: #81a915;
   }
 `;
 

@@ -63,12 +63,11 @@ export const Menu = styled.ul`
   @media (min-width: 1001px) {
     order: 3;                  /* вторая строка, справа от логотипа */
     flex: 1;
-    margin-left: 50px;
+    margin-left: 100px;
   }
 
   @media (max-width: 1000px) {
     flex-direction: column;
-    gap: 40px;
     padding: 10px 0;
     background: #fff;
     border-top: 1px solid #eee;
