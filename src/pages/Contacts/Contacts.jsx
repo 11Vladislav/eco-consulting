@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import ContactsImg from '../../img/contacts-2.jpg';
 import ContactsImgMob from '../../img/contacts-mob.png';
-import { Wrapper, Title, ContactsBlock, ContactItem, ContactTitle, ContactText, Span, AddressLink, Picture } from './Contacts.styled';
+import { Wrapper, Title, ContactsBlock, ContactItem, ContactTitle, ContactText, AddressLink, Picture } from './Contacts.styled';
 import { GiVibratingSmartphone } from "react-icons/gi";
 import { PiMapPinAreaFill } from "react-icons/pi";
 import { MdAlternateEmail } from "react-icons/md";

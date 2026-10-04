@@ -66,9 +66,6 @@ export const ContactText = styled.p`
     }
 `;
 
-export const Span = styled.span`
-  color: #000;
-`;
 
 export const AddressLink = styled(ContactText)`
     cursor: pointer;
