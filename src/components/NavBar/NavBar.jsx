@@ -1,24 +1,32 @@
 import { useState } from 'react';
 import {
     MenuLink, Nav, NavRow, Menu, MenuItem, Burger, Drawer,
-    Contacts, ContactItem, ContactLink, Span, ContactMail, ItemText
+    Contacts, ContactItem, ContactLink, Span, ContactMail, ItemText,
+    SubItem, ItemRow, SubToggle, Submenu, SubLink
 } from './NavBar.styled';
-
 import logo from './../../img/logo-2.jpg';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes, FaChevronDown } from 'react-icons/fa';
 import { PiMapPinDuotone } from "react-icons/pi";
 import { VscMail } from "react-icons/vsc";
 import { HiDevicePhoneMobile } from "react-icons/hi2";
 
+const serviceLinks = [
+    { to: '/services#emissions',  label: 'Дозвіл на викиди в атмосферу' },
+    { to: '/services#water',      label: 'Дозвіл на спеціальне водокористування' },
+    { to: '/services#ovd',        label: 'Оцінка впливу на довкілля (ОВД)' },
+    { to: '/services#declaration',label: 'Реєстрація декларації про відходи' },
+    { to: '/services#operations', label: 'Дозвіл на здійснення операцій з оброблення відходів' },
+    { to: '/services#plan',       label: 'Розробка плану управління відходами' },
+];
 
 export const NavBar = () => {
-
     const [open, setOpen] = useState(false);
-     const handleToggle = () => {
-            setOpen(!open);
-  };
-     const handleClose = () => {
+    const [subOpen, setSubOpen] = useState(false);
+
+    const handleToggle = () => setOpen(!open);
+    const handleClose = () => {
         setOpen(false);
+        setSubOpen(false);
     };
 
     return (
@@ -55,10 +63,31 @@ export const NavBar = () => {
                         
                     </ContactItem>
                 </Contacts>
-            <Menu  onClick={handleClose}>
-                <MenuItem>
-                    <MenuLink to="/services">Послуги</MenuLink>
-                </MenuItem>
+            <Menu onClick={handleClose}>
+                    <SubItem>
+                        <ItemRow>
+                            <MenuLink to="/services">Послуги</MenuLink>
+                            <SubToggle
+                                type="button"
+                                aria-label="Показати підпункти"
+                                $open={subOpen}
+                                onClick={(e) => {
+                                    e.stopPropagation();   // не закрывать панель
+                                    setSubOpen(!subOpen);
+                                }}
+                            >
+                                <FaChevronDown />
+                            </SubToggle>
+                        </ItemRow>
+
+                        <Submenu $open={subOpen}>
+                            {serviceLinks.map(({ to, label }) => (
+                                <li key={to}>
+                                    <SubLink to={to}>{label}</SubLink>
+                                </li>
+                            ))}
+                        </Submenu>
+                    </SubItem>
                 <MenuItem>
                     <MenuLink to="/law">Законодавство</MenuLink>
                 </MenuItem>
@@ -73,7 +102,6 @@ export const NavBar = () => {
                 </MenuItem>
 
             </Menu>
-  
             </Drawer>
         </Nav>
     )

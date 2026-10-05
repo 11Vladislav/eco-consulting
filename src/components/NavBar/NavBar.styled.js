@@ -85,6 +85,86 @@ export const MenuItem = styled.li`
   }
 `;
 
+export const SubItem = styled(MenuItem)`
+  position: relative;
+
+  @media (min-width: 1001px) {
+    &:hover > ul,
+    &:focus-within > ul {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+`;
+
+export const ItemRow = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+`;
+
+export const SubToggle = styled.button`
+  display: none;               /* на десктопе стрелка не нужна */
+  background: none;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  color: #000;
+  font-size: 14px;
+
+  svg {
+    transition: transform 0.3s;
+    transform: rotate(${({ $open }) => ($open ? '180deg' : '0')});
+  }
+
+  @media (max-width: 1000px) {
+    display: block;
+  }
+`;
+
+export const Submenu = styled.ul`
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: 1001px) {
+    position: absolute;
+    top: 100%;                 /* вплотную к пункту, чтобы hover не пропадал */
+    left: 0;
+    min-width: 340px;
+    padding: 10px 0;
+    background: #fff;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    z-index: 200;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+  }
+
+  @media (max-width: 1000px) {
+    display: ${({ $open }) => ($open ? 'block' : 'none')};
+    background: #fff;
+    padding: 5px 0;
+  }
+`;
+
+export const SubLink = styled(MenuLink)`
+  display: block;
+  padding: 10px 20px;
+  font-size: 16px;
+  line-height: 1.3;
+  text-align: left;
+
+  @media (max-width: 1000px) {
+    text-align: center;
+    padding: 10px;
+  }
+`;
+
 export const Burger = styled.div`
   display: none;
 
