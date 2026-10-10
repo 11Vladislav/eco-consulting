@@ -70,19 +70,6 @@ export const ParagraphLink = styled(Link)`
     text-decoration: none;
 `;
 
-// export const MoreLink = styled(Link)`
-//     display: inline-block;
-//     margin-top: 8px;
-//     font-family: 'BanderaPro', sans-serif;
-//     font-size: 15px;
-//     color: #000;
-//     text-decoration: none;
-
-//     &:hover {
-//         color: #A1C935;
-//     }
-// `;
-
 export const DetailWrapper = styled(Wrapper)`
     padding-top: 200px;          /* место под хедер, подберите под свою высоту */
     min-height: 60vh;
@@ -156,4 +143,12 @@ export const DetailList = styled.ul`
         color: #A1C935;
         font-weight: 700;
     }
+`;
+
+export const SectionLabel = styled.h4`
+    margin-top: 30px;
+    font-family: 'BanderaPro', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #000;
 `;
