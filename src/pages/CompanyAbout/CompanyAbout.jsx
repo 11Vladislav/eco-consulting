@@ -1,4 +1,4 @@
-import { Wrapper, Title, Text, Span, Img } from './CompanyAbout.styled';
+import { Wrapper, Title, Text, Span } from './CompanyAbout.styled';
 import AboutImg from '../../img/about-1.jpg';
 import { Footer } from 'components/Footer/Footer';
 
