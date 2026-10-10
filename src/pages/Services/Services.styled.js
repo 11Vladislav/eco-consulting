@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { Link } from 'react-router-dom';
 
 
 export const Picture = styled.picture`
@@ -43,7 +43,7 @@ export const Title = styled.h2`
 export const Text = styled.p`
     margin-top: 20px;
     font-family: 'BanderaPro', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
 `;
 
 export const TextAttention = styled.h3`
@@ -65,6 +65,44 @@ export const Paragraph = styled.h3`
   }
 `;
 
+export const ParagraphLink = styled(Link)`
+    color: inherit;
+    text-decoration: none;
+`;
+
+// export const MoreLink = styled(Link)`
+//     display: inline-block;
+//     margin-top: 8px;
+//     font-family: 'BanderaPro', sans-serif;
+//     font-size: 15px;
+//     color: #000;
+//     text-decoration: none;
+
+//     &:hover {
+//         color: #A1C935;
+//     }
+// `;
+
+export const DetailWrapper = styled(Wrapper)`
+    padding-top: 200px;          /* место под хедер, подберите под свою высоту */
+    min-height: 60vh;
+
+    @media (max-width: 1000px) {
+        padding-top: 120px;
+    }
+`;
+
+export const BackLink = styled(Link)`
+    margin-bottom: 10px;
+    font-family: 'BanderaPro', sans-serif;
+    color: #000;
+    text-decoration: none;
+
+    &:hover {
+        color: #A1C935;
+    }
+`;
+
 export const Textblock = styled.div`
     margin-top: 50px;
    
@@ -79,4 +117,43 @@ export const Listitem = styled.li`
     font-style: "BanderaPro" sans-serif;
     font-size: 16;
 
+`;
+
+export const DetailImage = styled.img`
+    display: block;
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    margin-top: 20px;
+    border-radius: 6px;
+`;
+
+export const SectionTitle = styled.h3`
+    margin-top: 40px;
+    font-family: 'BanderaPro', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #A1C935;
+
+    @media (max-width: 768px) {
+        font-size: 20px;
+    }
+`;
+
+export const DetailList = styled.ul`
+    margin-top: 15px;
+    padding-left: 25px;
+    list-style: ${({ $ordered }) => ($ordered ? 'decimal' : 'disc')};
+    font-family: 'BanderaPro', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+
+    li {
+        margin-top: 8px;
+    }
+
+    li::marker {
+        color: #A1C935;
+        font-weight: 700;
+    }
 `;

@@ -1,4 +1,4 @@
-import { Wrapper, Title, Text, Span } from './CompanyAbout.styled';
+import { Wrapper, Title, Text, Span, Img } from './CompanyAbout.styled';
 import AboutImg from '../../img/about-1.jpg';
 import { Footer } from 'components/Footer/Footer';
 
@@ -8,6 +8,7 @@ export const CompanyAbout = () => {
         <>
             <Wrapper>
                 <Title>Про нас</Title>
+              <img src={AboutImg} alt='about img' height='358' width='1000'/>
                 <Text>
                     Компанія<Span> ТОВ «Екологічний консалтинг»</Span> надає
                     професійні послуги підприємствам з питань, що стосуються охорони
@@ -49,7 +50,7 @@ export const CompanyAbout = () => {
                 <Text>
                     Давайте будувати його разом тут і зараз!
                 </Text>
-                  <img src={AboutImg} alt='about img' height='458' width='1200'/>
+
             </Wrapper>
           
             <Footer />

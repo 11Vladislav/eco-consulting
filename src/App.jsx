@@ -9,7 +9,7 @@ import { ScrollToTopButton } from './App.styled';
 import { FaArrowUp } from 'react-icons/fa';
 import { Licenses } from 'pages/Licenses/Licenses';
 import { Contacts } from 'pages/Contacts/Contacts';
-
+import { ServiceDetail } from 'pages/ServiceDetail/ServiceDetail';
 
 
 export const App = () => {
@@ -41,7 +41,8 @@ export const App = () => {
       <Routes>
         <Route path='/' element={<Layout />}>
         <Route index path="/" element={<HomePage />} />
-          <Route path="services" element={<Services />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/services/:slug" element={<ServiceDetail />} />
           <Route path="law" element={<Law />} />
           <Route path="companyabout" element={<CompanyAbout />} />
           <Route path="licenses" element={<Licenses />} />

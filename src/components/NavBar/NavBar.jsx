@@ -9,15 +9,9 @@ import { FaBars, FaTimes, FaChevronDown } from 'react-icons/fa';
 import { PiMapPinDuotone } from "react-icons/pi";
 import { VscMail } from "react-icons/vsc";
 import { HiDevicePhoneMobile } from "react-icons/hi2";
+import { services } from '../../data/services';
 
-const serviceLinks = [
-    { to: '/services#emissions',  label: 'Дозвіл на викиди в атмосферу' },
-    { to: '/services#water',      label: 'Дозвіл на спеціальне водокористування' },
-    { to: '/services#ovd',        label: 'Оцінка впливу на довкілля (ОВД)' },
-    { to: '/services#declaration',label: 'Реєстрація декларації про відходи' },
-    { to: '/services#operations', label: 'Дозвіл на здійснення операцій з оброблення відходів' },
-    { to: '/services#plan',       label: 'Розробка плану управління відходами' },
-];
+
 
 export const NavBar = () => {
     const [open, setOpen] = useState(false);
@@ -81,11 +75,11 @@ export const NavBar = () => {
                         </ItemRow>
 
                         <Submenu $open={subOpen}>
-                            {serviceLinks.map(({ to, label }) => (
-                                <li key={to}>
-                                    <SubLink to={to}>{label}</SubLink>
-                                </li>
-                            ))}
+                                {services.map(({ slug, title }) => (
+                                    <li key={slug}>
+                                        <SubLink to={`/services/${slug}`}>{title}</SubLink>
+                                    </li>
+                                ))}
                         </Submenu>
                     </SubItem>
                 <MenuItem>

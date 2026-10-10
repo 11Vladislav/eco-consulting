@@ -13,6 +13,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Title = styled.h2`
+    color: #A1C935;
     font-size: 35px;
     font-weight: 600;
     line-height: 1;
@@ -40,5 +41,6 @@ export const Span = styled.span`
 `;
 
 export const Img = styled.div`
-    padding: 15px 0;
+    display: block;
+    max-height: 258px;
 `;
