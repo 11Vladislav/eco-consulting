@@ -71,7 +71,7 @@ export const ParagraphLink = styled(Link)`
 `;
 
 export const DetailWrapper = styled(Wrapper)`
-    padding-top: 200px;          /* место под хедер, подберите под свою высоту */
+    padding-top: 120px;          /* место под хедер, подберите под свою высоту */
     min-height: 60vh;
 
     @media (max-width: 1000px) {

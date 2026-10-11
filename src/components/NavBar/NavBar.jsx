@@ -28,7 +28,7 @@ export const NavBar = () => {
             
             <NavRow>
                 <MenuLink to="/">
-                    <img src={logo} alt='logo' width='124' height='84'/>
+                    <img src={logo} alt='logo' width='134' height='84'/>
                 </MenuLink>
             
                 <Burger onClick={handleToggle}>
