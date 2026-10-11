@@ -66,6 +66,7 @@ export const services = [
 
   {
     slug: 'water',
+    title: 'Дозвіл на спеціальне водокористування',
     image: waterImg,
     imageAlt: 'Викиди підприємства у водойму',
 intro: [
