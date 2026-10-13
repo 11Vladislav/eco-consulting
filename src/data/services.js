@@ -1,4 +1,4 @@
-import emissionsImg from '../img/smoke-1.jpg';
+import emissionsImg from '../img/smoke-2.jpg';
 import waterImg from '../img/pipe-2.jpg';
 import ovdImg from '../img/laptop-4.jpeg';
 

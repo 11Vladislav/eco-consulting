@@ -46,9 +46,6 @@ export const ServiceDetail = () => {
                     <Text key={p}>{renderRich(p)}</Text>
                     ))}
 
-                {/* intro для новых страниц, text для старых, ещё не расширенных */}
-                {(intro || text) && <Text>{intro || text}</Text>}
-
                 {sections.map(({ heading, label, paragraphs = [], list, ordered, after }, i) => (
                     <section key={i}>
                      {heading && <SectionTitle>{heading}</SectionTitle>}
