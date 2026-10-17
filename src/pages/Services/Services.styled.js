@@ -106,13 +106,23 @@ export const Listitem = styled.li`
 
 `;
 
-export const DetailImage = styled.img`
+export const DetailPicture = styled.picture`
     display: block;
-    width: 100%;
-    max-height: 420px;
-    object-fit: cover;
     margin-top: 20px;
-    border-radius: 6px;
+
+    img {
+        display: block;
+        width: 100%;
+        max-height: 420px;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+
+    @media (max-width: 768px) {
+        img {
+            max-height: none;     /* мобильная картинка показывается целиком */
+        }
+    }
 `;
 
 export const SectionTitle = styled.h3`
@@ -151,4 +161,19 @@ export const SectionLabel = styled.h4`
     font-size: 17px;
     font-weight: 700;
     color: #000;
+`;
+
+export const Accent = styled.strong`
+    color: #A1C935;
+    font-weight: 700;
+`;
+
+export const ExtLink = styled.a`
+    color: #A1C935;
+    font-weight: 700;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
 `;

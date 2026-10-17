@@ -3,16 +3,29 @@ import { useParams, Navigate } from 'react-router-dom';
 import { services } from '../../data/services';
 import { Breadcrumbs } from 'components/Breadcrumbs/Breadcrumbs';
 import {
-    DetailWrapper,  Title, Text, DetailImage,
-    SectionTitle, DetailList, SectionLabel
+    DetailWrapper,  Title, Text, DetailPicture,
+    SectionTitle, DetailList, SectionLabel, Accent, ExtLink
 } from '../Services/Services.styled';
 import { ConsultationForm } from 'components/ConsultationForm/ConsultationForm';
 import { Footer } from 'components/Footer/Footer';
 
 const renderRich = (text) =>
-    text.split(/(\*\*[^*]+\*\*)/g).map((part, i) =>
-        part.startsWith('**') ? <strong key={i}>{part.slice(2, -2)}</strong> : part
-    );
+    text
+        .split(/(\[[^\]]+\]\([^)]+\)|\*\*[^*]+\*\*|==[^=]+==|\*[^*]+\*)/g)
+        .map((part, i) => {
+            const link = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+            if (link) {
+                return (
+                    <ExtLink key={i} href={link[2]} target="_blank" rel="noopener noreferrer">
+                        {link[1]}
+                    </ExtLink>
+                );
+            }
+            if (part.startsWith('**')) return <strong key={i}>{part.slice(2, -2)}</strong>;
+            if (part.startsWith('==')) return <Accent key={i}>{part.slice(2, -2)}</Accent>;
+            if (part.startsWith('*')) return <em key={i}>{part.slice(1, -1)}</em>;
+            return part;
+        });
 
 export const ServiceDetail = () => {
     const { slug } = useParams();
@@ -24,7 +37,7 @@ export const ServiceDetail = () => {
 
     if (!service) return <Navigate to="/services" replace />;
 
-    const { title, image, imageAlt, intro, text, sections = [],} = service;
+    const { title, image, imageMobile, imageAlt, intro, text, sections = [],} = service;
     const introParagraphs = [].concat(intro || text || []);
 
     
@@ -41,7 +54,14 @@ export const ServiceDetail = () => {
             />
                 <Title>{title}</Title>
 
-                {image && <DetailImage src={image} alt={imageAlt || title} />}
+               {image && (
+                    <DetailPicture>
+                        {imageMobile && (
+                            <source media="(max-width: 768px)" srcSet={imageMobile} />
+                         )}
+                        <img src={image} alt={imageAlt || title} />
+                    </DetailPicture>
+                    )}
                 {introParagraphs.map((p) => (
                     <Text key={p}>{renderRich(p)}</Text>
                     ))}
