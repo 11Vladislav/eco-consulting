@@ -27,7 +27,7 @@ export const AfterTitle = styled.h3`
     letter-spacing: 3px;
     text-transform: uppercase;
     color: #A1C935;
-    animation: ${fadeUp} 0.7s ease-out both;
+    animation: ${fadeUp} 0.7s ease-out 0.1s backwards;
 `;
 
 export const Title = styled.h2`
@@ -37,7 +37,7 @@ export const Title = styled.h2`
     line-height: 1.2;
     text-align: center;
     text-transform: uppercase;
-    animation: ${fadeUp} 0.7s ease-out 0.1s both;
+    animation: ${fadeUp} 0.7s ease-out 0.1s backwards;
 
     /* акцентная черта под заголовком */
     &::after {
@@ -62,7 +62,7 @@ export const Text = styled.p`
     line-height: 1.7;
     text-align: center;
     color: #444;
-    animation: ${fadeUp} 0.7s ease-out 0.2s both;
+    animation: ${fadeUp} 0.7s ease-out 0.1s backwards;
 `;
 
 export const Span = styled.span`
@@ -97,7 +97,7 @@ export const ListItem = styled.li`
     border-top: 4px solid ${({ $color }) => $color};
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
-    animation: ${fadeUp} 0.7s ease-out ${({ $delay }) => $delay + 0.3}s both;
+    animation: ${fadeUp} 0.7s ease-out ${({ $delay }) => $delay + 0.3}s backwards;
 
     &:hover {
         transform: translateY(-5px);

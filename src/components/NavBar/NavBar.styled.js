@@ -22,7 +22,7 @@ export const Nav = styled.nav`
   width: 100%;
   box-sizing: border-box;
   background: #fff;
-  z-index: 100;
+  z-index: 1000;
 
   @media (max-width: 1000px) {
     display: flex;

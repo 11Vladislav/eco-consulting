@@ -44,7 +44,7 @@ export const About = () => {
                                 styles={buildStyles({
                                     pathTransitionDuration: 1.2,
                                     rotation: 0,
-                                    textSize: '22px',
+                                    textSize: '18px',
                                     textColor: item.color,
                                     pathColor: item.color,
                                     trailColor: '#eceff1',
