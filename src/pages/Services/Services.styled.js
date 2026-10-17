@@ -113,7 +113,7 @@ export const DetailPicture = styled.picture`
     img {
         display: block;
         width: 100%;
-        max-height: 420px;
+        max-height: 620px;
         object-fit: cover;
         border-radius: 6px;
     }
