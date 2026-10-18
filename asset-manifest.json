@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/eco-consulting/static/css/main.43d03b56.css",
-    "main.js": "/eco-consulting/static/js/main.3e43ac04.js",
+    "main.js": "/eco-consulting/static/js/main.114bb8b1.js",
     "static/media/contacts-mob.png": "/eco-consulting/static/media/contacts-mob.55a9bccc6e17b1cc6283.png",
     "static/media/contacts-2.jpg": "/eco-consulting/static/media/contacts-2.07d1a3e5b92b14cdb3d8.jpg",
     "static/media/laptop-4.jpeg": "/eco-consulting/static/media/laptop-4.7f15d03581be98709ab4.jpeg",
@@ -10,6 +10,7 @@
     "static/media/laptop-2.jpg": "/eco-consulting/static/media/laptop-2.b8045151ceeda79ebf37.jpg",
     "static/media/laptop-3.jpg": "/eco-consulting/static/media/laptop-3.5db015c3047fa5439a46.jpg",
     "static/media/laptop-5.jpg": "/eco-consulting/static/media/laptop-5.896b9d9610413a16652f.jpg",
+    "static/media/workers-2.jpg": "/eco-consulting/static/media/workers-2.aa7b14762118c8a196e1.jpg",
     "static/media/cover-min.jpg": "/eco-consulting/static/media/cover-min.d18fae3c7f5821a2e753.jpg",
     "static/media/pipe-1.jpg": "/eco-consulting/static/media/pipe-1.671b7122a4298197de8e.jpg",
     "static/media/cover.jpg": "/eco-consulting/static/media/cover.7c74580bc9df92f1bf69.jpg",
@@ -17,6 +18,7 @@
     "static/media/thrash-1.jpg": "/eco-consulting/static/media/thrash-1.4bac4b8ca81a45a9e3a6.jpg",
     "static/media/smoke-2.jpg": "/eco-consulting/static/media/smoke-2.971c67bcb0a1e05a5998.jpg",
     "static/media/thrash-2.jpg": "/eco-consulting/static/media/thrash-2.9d2f87b5d8a09f78c2ce.jpg",
+    "static/media/phone-2.jpg": "/eco-consulting/static/media/phone-2.09214d3d61793f2db77c.jpg",
     "static/media/BanderaPro.ttf": "/eco-consulting/static/media/BanderaPro.0da559f78558bdbf0a28.ttf",
     "static/media/BanderaPro-Bold.ttf": "/eco-consulting/static/media/BanderaPro-Bold.4906d363cfbe79c2d33e.ttf",
     "static/media/leaf.png": "/eco-consulting/static/media/leaf.8c1087b3de3347569167.png",
@@ -28,10 +30,10 @@
     "static/media/recycle.png": "/eco-consulting/static/media/recycle.4eb7f7ffebc832d7d3ff.png",
     "index.html": "/eco-consulting/index.html",
     "main.43d03b56.css.map": "/eco-consulting/static/css/main.43d03b56.css.map",
-    "main.3e43ac04.js.map": "/eco-consulting/static/js/main.3e43ac04.js.map"
+    "main.114bb8b1.js.map": "/eco-consulting/static/js/main.114bb8b1.js.map"
   },
   "entrypoints": [
     "static/css/main.43d03b56.css",
-    "static/js/main.3e43ac04.js"
+    "static/js/main.114bb8b1.js"
   ]
 }
