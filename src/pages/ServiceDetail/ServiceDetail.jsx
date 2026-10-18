@@ -11,7 +11,7 @@ import { Footer } from 'components/Footer/Footer';
 
 const renderRich = (text) =>
     text
-        .split(/(\[[^\]]+\]\([^)]+\)|\*\*[^*]+\*\*|==[^=]+==|\*[^*]+\*)/g)
+        .split(/(\[[^\]]+\]\([^)]+\)|\*\*\*[^*]+\*\*\*|\*\*[^*]+\*\*|==[^=]+==|\*[^*]+\*)/g)
         .map((part, i) => {
             const link = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
             if (link) {
@@ -21,6 +21,7 @@ const renderRich = (text) =>
                     </ExtLink>
                 );
             }
+            if (part.startsWith('***')) return <strong key={i}><em>{part.slice(3, -3)}</em></strong>;
             if (part.startsWith('**')) return <strong key={i}>{part.slice(2, -2)}</strong>;
             if (part.startsWith('==')) return <Accent key={i}>{part.slice(2, -2)}</Accent>;
             if (part.startsWith('*')) return <em key={i}>{part.slice(1, -1)}</em>;
