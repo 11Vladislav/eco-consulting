@@ -82,9 +82,9 @@ export const NavBar = () => {
                                 ))}
                         </Submenu>
                     </SubItem>
-                <MenuItem>
+                {/* <MenuItem>
                     <MenuLink to="/law">Законодавство</MenuLink>
-                </MenuItem>
+                </MenuItem> */}
                 <MenuItem>
                     <MenuLink to="/companyabout">Про нас</MenuLink>
                 </MenuItem>

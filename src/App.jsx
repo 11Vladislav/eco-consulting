@@ -3,7 +3,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import { Layout } from "./components/Layout/Layout";
 import { HomePage } from "./pages/HomePage/HomePage";
 import { Services } from "./pages/Services/Services";
-import { Law } from 'pages/Law/Law';
+// import { Law } from 'pages/Law/Law';
 import { CompanyAbout } from 'pages/CompanyAbout/CompanyAbout';
 import { ScrollToTopButton } from './App.styled';
 import { FaArrowUp } from 'react-icons/fa';
@@ -43,7 +43,7 @@ export const App = () => {
         <Route index path="/" element={<HomePage />} />
           <Route path="/services" element={<Services />} />
           <Route path="/services/:slug" element={<ServiceDetail />} />
-          <Route path="law" element={<Law />} />
+          {/* <Route path="law" element={<Law />} /> */}
           <Route path="companyabout" element={<CompanyAbout />} />
           <Route path="licenses" element={<Licenses />} />
           <Route path="contacts" element={<Contacts/>} />

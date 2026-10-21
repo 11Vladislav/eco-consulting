@@ -1,7 +1,7 @@
 import { HomeContainer} from './HomePage.styled';
 import { HeroContent } from 'components/HeroContent/HeroContent';
 import { Offers } from 'components/Offers/Offers';
-import { About } from 'components/About/About';
+// import { About } from 'components/About/About';
 import { HowWork } from 'components/HowWork/HowWork';
 import { ConsultationForm } from 'components/ConsultationForm/ConsultationForm';
 import { Footer } from 'components/Footer/Footer';
@@ -17,7 +17,7 @@ export const HomePage = () => {
             <HeroContent />
         </HomeContainer>
             <Offers />
-            <About />
+            {/* <About /> */}
             <HowWork />
             <ConsultationForm />
             <Footer/>
