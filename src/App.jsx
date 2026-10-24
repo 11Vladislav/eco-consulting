@@ -41,12 +41,12 @@ export const App = () => {
       <Routes>
         <Route path='/' element={<Layout />}>
         <Route index path="/" element={<HomePage />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/services/:slug" element={<ServiceDetail />} />
+          <Route path="poslugy" element={<Services />} />
+          <Route path="/poslugy/:slug" element={<ServiceDetail />} />
           {/* <Route path="law" element={<Law />} /> */}
-          <Route path="companyabout" element={<CompanyAbout />} />
-          <Route path="licenses" element={<Licenses />} />
-          <Route path="contacts" element={<Contacts/>} />
+          <Route path="pro-nas" element={<CompanyAbout />} />
+          <Route path="litsenzii" element={<Licenses />} />
+          <Route path="kontaktu" element={<Contacts/>} />
           <Route path="*" element={<Navigate replace to="/" />} />
         </Route> 
       </Routes> 

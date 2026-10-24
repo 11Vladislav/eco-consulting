@@ -56,6 +56,7 @@ export const NavRow = styled.div`
 export const Menu = styled.ul`
   display: flex;
   align-items: center;
+  gap: 40px;
   list-style: none;
   margin: 0;
   padding: 0;

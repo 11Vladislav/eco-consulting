@@ -8,7 +8,7 @@ export const CompanyAbout = () => {
         <>
             <Wrapper>
                 <Title>Про нас</Title>
-              <img src={AboutImg} alt='about img' height='358' width='1000'/>
+             
                 <Text>
                     Компанія<Span> ТОВ «Екологічний консалтинг»</Span> надає
                     професійні послуги підприємствам з питань, що стосуються охорони
@@ -50,7 +50,7 @@ export const CompanyAbout = () => {
                 <Text>
                     Давайте будувати його разом тут і зараз!
                 </Text>
-
+                 <img src={AboutImg} alt='about img' height='358' width='1000'/>
             </Wrapper>
           
             <Footer />

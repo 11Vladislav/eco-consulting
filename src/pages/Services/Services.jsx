@@ -27,7 +27,7 @@ export const Services = () => {
                             {services.map(({ slug, title, text }, index) => (
                                 <div key={slug}>
                                     <Paragraph>
-                                        <ParagraphLink to={`/services/${slug}`}>
+                                        <ParagraphLink to={`/poslugy/${slug}`}>
                                             {index + 1}. {title}
                                         </ParagraphLink>
                                     </Paragraph>

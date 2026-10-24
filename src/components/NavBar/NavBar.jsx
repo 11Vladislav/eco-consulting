@@ -60,7 +60,7 @@ export const NavBar = () => {
             <Menu onClick={handleClose}>
                     <SubItem>
                         <ItemRow>
-                            <MenuLink to="/services">Послуги</MenuLink>
+                            <MenuLink to="/poslugy">Послуги</MenuLink>
                             <SubToggle
                                 type="button"
                                 aria-label="Показати підпункти"
@@ -77,7 +77,7 @@ export const NavBar = () => {
                         <Submenu $open={subOpen}>
                                 {services.map(({ slug, title }) => (
                                     <li key={slug}>
-                                        <SubLink to={`/services/${slug}`}>{title}</SubLink>
+                                        <SubLink to={`/poslugy/${slug}`}>{title}</SubLink>
                                     </li>
                                 ))}
                         </Submenu>
@@ -86,13 +86,13 @@ export const NavBar = () => {
                     <MenuLink to="/law">Законодавство</MenuLink>
                 </MenuItem> */}
                 <MenuItem>
-                    <MenuLink to="/companyabout">Про нас</MenuLink>
+                    <MenuLink to="/pro-nas">Про нас</MenuLink>
                 </MenuItem>
                 <MenuItem>
-                    <MenuLink to="/licenses">Ліцензії</MenuLink>
+                    <MenuLink to="/litsenzii">Ліцензії</MenuLink>
                 </MenuItem>
                 <MenuItem>
-                    <MenuLink to="/contacts">Контакти</MenuLink> 
+                    <MenuLink to="/kontaktu">Контакти</MenuLink> 
                 </MenuItem>
 
             </Menu>
