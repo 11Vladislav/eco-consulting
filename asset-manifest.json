@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/eco-consulting/static/css/main.43d03b56.css",
-    "main.js": "/eco-consulting/static/js/main.51d4c178.js",
+    "main.js": "/eco-consulting/static/js/main.a09aa4b6.js",
     "static/media/contacts-mob.png": "/eco-consulting/static/media/contacts-mob.55a9bccc6e17b1cc6283.png",
     "static/media/contacts-2.jpg": "/eco-consulting/static/media/contacts-2.07d1a3e5b92b14cdb3d8.jpg",
     "static/media/laptop-4.jpeg": "/eco-consulting/static/media/laptop-4.7f15d03581be98709ab4.jpeg",
@@ -30,10 +30,10 @@
     "static/media/recycle.png": "/eco-consulting/static/media/recycle.4eb7f7ffebc832d7d3ff.png",
     "index.html": "/eco-consulting/index.html",
     "main.43d03b56.css.map": "/eco-consulting/static/css/main.43d03b56.css.map",
-    "main.51d4c178.js.map": "/eco-consulting/static/js/main.51d4c178.js.map"
+    "main.a09aa4b6.js.map": "/eco-consulting/static/js/main.a09aa4b6.js.map"
   },
   "entrypoints": [
     "static/css/main.43d03b56.css",
-    "static/js/main.51d4c178.js"
+    "static/js/main.a09aa4b6.js"
   ]
 }
