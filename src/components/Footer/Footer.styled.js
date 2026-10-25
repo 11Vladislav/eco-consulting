@@ -7,7 +7,7 @@ export const FooterContainer = styled.footer`
   display: flex;
   justify-content: space-around;
   gap: 10px;
-  padding: 45px;
+  padding: 25px;
   flex-wrap: wrap;
   font-family: 'BanderaPro', sans-serif;
 

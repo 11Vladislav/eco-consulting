@@ -2,7 +2,7 @@ import { useState } from 'react';
 import {
     MenuLink, Nav, NavRow, Menu, MenuItem, Burger, Drawer,
     Contacts, ContactItem, ContactLink, Span, ContactMail, ItemText,
-    SubItem, ItemRow, SubToggle, Submenu, SubLink
+    SubItem, ItemRow, SubToggle, Submenu, SubLink, LinkWrap,
 } from './NavBar.styled';
 import logo from './../../img/logo-2.jpg';
 import { FaBars, FaTimes, FaChevronDown } from 'react-icons/fa';
@@ -60,18 +60,20 @@ export const NavBar = () => {
             <Menu onClick={handleClose}>
                     <SubItem>
                         <ItemRow>
-                            <MenuLink to="/poslugy">Послуги</MenuLink>
-                            <SubToggle
-                                type="button"
-                                aria-label="Показати підпункти"
-                                $open={subOpen}
-                                onClick={(e) => {
-                                    e.stopPropagation();   // не закрывать панель
-                                    setSubOpen(!subOpen);
-                                }}
-                            >
-                                <FaChevronDown />
-                            </SubToggle>
+                            <LinkWrap>
+                                <MenuLink to="/poslugy">Послуги</MenuLink>
+                                <SubToggle
+                                    type="button"
+                                    aria-label="Показати підпункти"
+                                    $open={subOpen}
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        setSubOpen(!subOpen);
+                                    }}
+                                >
+                                    <FaChevronDown />
+                                </SubToggle>
+                            </LinkWrap>
                         </ItemRow>
 
                         <Submenu $open={subOpen}>

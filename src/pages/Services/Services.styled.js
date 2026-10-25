@@ -56,7 +56,7 @@ export const TextAttention = styled.h3`
 export const Paragraph = styled.h3`
     margin-top: 20px;
     font-family: 'BanderaPro', sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 700;
     color: #A1C935;
      &:hover {

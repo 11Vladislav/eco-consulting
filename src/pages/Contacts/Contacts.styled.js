@@ -8,17 +8,20 @@ export const Wrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     
-    padding-top: 125px;
+    padding-top: 100px;
     padding-left: 15px;
     padding-right: 15px;
     margin-bottom: 15px;
+    @media (max-width: 768px) {
+        padding-top: 75px;
+    }
 `;
 
 
 
 export const Title = styled.h2`
     margin-top: 10%;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     color: #A1C935;
     margin-top: 30px;
     font-size: 32px;
@@ -31,13 +34,14 @@ export const Title = styled.h2`
 `;
 
 export const ContactsBlock = styled.ul`
-    margin-top: 50px;
+    margin-top: 20px;
     display: flex;
     max-width: 1000px;
     gap: 15px;
     justify-content: space-between;
     @media (max-width: 768px) {
         display: block;
+        margin-top: 10px;
     }
 `;
 

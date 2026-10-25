@@ -14,6 +14,7 @@ export const MenuLink = styled(NavLink)`
     font-family: 'BanderaPro', sans-serif;
   &:hover {
     color: #A1C935;
+
   }
 `
 
@@ -23,6 +24,7 @@ export const Nav = styled.nav`
   box-sizing: border-box;
   background: #fff;
   z-index: 1000;
+  
 
   @media (max-width: 1000px) {
     display: flex;
@@ -56,15 +58,17 @@ export const NavRow = styled.div`
 export const Menu = styled.ul`
   display: flex;
   align-items: center;
-  gap: 40px;
+
   list-style: none;
   margin: 0;
   padding: 0;
+  
 
   @media (min-width: 1001px) {
     order: 3;                  /* вторая строка, справа от логотипа */
     flex: 1;
     margin-left: 100px;
+      gap: 40px;
   }
 
   @media (max-width: 1000px) {
@@ -72,6 +76,8 @@ export const Menu = styled.ul`
     padding: 10px 0;
     background: #fff;
     border-top: 1px solid #eee;
+    &:first-child{
+    margin-left: 20px;}
   }
 `;
 
@@ -100,14 +106,14 @@ export const SubItem = styled(MenuItem)`
 `;
 
 export const ItemRow = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
 `;
 
 export const SubToggle = styled.button`
-  display: none;               /* на десктопе стрелка не нужна */
+  display: none;
   background: none;
   border: none;
   padding: 6px;
@@ -122,6 +128,11 @@ export const SubToggle = styled.button`
 
   @media (max-width: 1000px) {
     display: block;
+    position: absolute;
+    left: 100%;          /* сразу справа от текста */
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 8px;
   }
 `;
 
@@ -266,4 +277,9 @@ export const ItemText = styled.div`
   margin-left: 5px;
   font-size: 14px;
   font-weight: 600;
+`;
+
+export const LinkWrap = styled.div`
+  position: relative;
+  display: inline-block;
 `;

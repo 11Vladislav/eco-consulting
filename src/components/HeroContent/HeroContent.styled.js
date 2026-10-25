@@ -23,7 +23,7 @@ export const Wrap = styled.div`
 export const TitleContainer = styled.div`
  
   @media (max-width: 768px) {
-    margin-top: 45%;
+    margin-top: 65%;
      max-width: 300px;
   }
   
