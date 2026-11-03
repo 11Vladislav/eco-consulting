@@ -1,6 +1,10 @@
 import { useEffect } from 'react';
-import { useParams, Navigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { services } from '../../data/services';
+import { Seo } from '../../seo/Seo';
+import { JsonLd } from '../../seo/JsonLd';
+import { SITE } from '../../seo/config';
+import { pageUrl, photoAlt, BASE } from '../../seo/utils';
 import { Breadcrumbs } from 'components/Breadcrumbs/Breadcrumbs';
 import {
     DetailWrapper,  Title, Text, DetailPicture,
@@ -8,6 +12,7 @@ import {
 } from '../Services/Services.styled';
 import { ConsultationForm } from 'components/ConsultationForm/ConsultationForm';
 import { Footer } from 'components/Footer/Footer';
+import { NotFound } from 'pages/NotFound/NotFound';
 
 const renderRich = (text) =>
     text
@@ -36,31 +41,59 @@ export const ServiceDetail = () => {
         window.scrollTo(0, 0);
     }, [slug]);
 
-    if (!service) return <Navigate to="/services" replace />;
+    if (!service) return <NotFound />;
 
-    const { title, image, imageMobile, imageAlt, intro, text, sections = [],} = service;
+    const { title, image, imageMobile, intro, text, sections = [],} = service;
     const introParagraphs = [].concat(intro || text || []);
-
+    const { seo = {} } = service;    // необязательное поле в services.js
+    const url = pageUrl(`/poslugy/${slug}`);
     
 
     return (
         <>
+            <Seo
+                name={title}
+                title={seo.title}
+                description={seo.description}
+                canonical={seo.canonical}
+                />
+            <JsonLd
+                data={{
+                    '@context': 'https://schema.org',
+                    '@type': 'Service',
+                    name: title,
+                    url,
+                    areaServed: 'UA',
+                    provider: { '@id': `${SITE.url}${BASE}/#organization` },
+                }}
+            />
+                {SITE.author.name && (
+            <JsonLd
+                data={{
+                '@context': 'https://schema.org',
+                '@type': 'WebPage',
+                url,
+                name: title,
+                author: { '@type': 'Person', name: SITE.author.name, url: SITE.author.url },
+                }}
+            />
+            )}
             <DetailWrapper>
                 <Breadcrumbs
                     items={[
                         { label: 'Головна', to: '/' },
-                        { label: 'Послуги', to: '/services' },
+                        { label: 'Послуги', to: '/poslugy' },
                         { label: title },
                             ]}
             />
-                <Title>{title}</Title>
+                <Title as="h1">{seo.h1 || title}</Title>
 
                {image && (
                     <DetailPicture>
                         {imageMobile && (
                             <source media="(max-width: 768px)" srcSet={imageMobile} />
                          )}
-                        <img src={image} alt={imageAlt || title} />
+                        <img src={image} alt={photoAlt(title, 1)} title={photoAlt(title, 1)} />
                     </DetailPicture>
                     )}
                 {introParagraphs.map((p) => (

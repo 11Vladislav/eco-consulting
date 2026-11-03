@@ -68,3 +68,12 @@ export const Error = styled.div`
   margin-bottom: 10px;
 
 `;
+
+export const Honeypot = styled.input`
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+`;
+

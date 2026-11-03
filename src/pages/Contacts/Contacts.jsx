@@ -7,16 +7,16 @@ import { PiMapPinAreaFill } from "react-icons/pi";
 import { MdAlternateEmail } from "react-icons/md";
 import { ConsultationForm } from 'components/ConsultationForm/ConsultationForm';
 import { Footer } from 'components/Footer/Footer';
-
+import { usePageSeo } from '../../seo/utils';
 
 export const Contacts = () => {
     const [mapTrigger, setMapTrigger] = useState(0);
     const handleAddressClick = () => setMapTrigger((n) => n + 1);
-
+const { h1 } = usePageSeo();
     return (
         <>
         <Wrapper>
-            <Title>ТОВ “Екологічний консалтинг”</Title>
+            <Title as="h1">{h1}&nbsp;ТОВ “Екологічний консалтинг”</Title>
             <Picture>
                 <source media="(max-width: 768px)" srcSet={ContactsImgMob} />
                 <img src={ContactsImg} alt="contacts img" width="1000" height="458" />

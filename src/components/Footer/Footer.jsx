@@ -32,11 +32,11 @@ export const Footer = ({ mapTrigger = 0 }) => {
         </Icon>
         <ItemText>+38 (093) 833-42-80</ItemText>
       </FooterItem>
-      <FooterItem as="a" href="mailto:info@www.eco-consulting.com.ua">
+      <FooterItem as="a" href="mailto:info@.eco-consulting.com.ua">
         <Icon>
           <FaEnvelope />
         </Icon>
-        <ItemText>info@www.eco-consulting.com.ua</ItemText>
+        <ItemText>info@.eco-consulting.com.ua</ItemText>
       </FooterItem>
       {showMap && (
         <MapFrame

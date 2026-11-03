@@ -10,7 +10,11 @@ import { FaArrowUp } from 'react-icons/fa';
 import { Licenses } from 'pages/Licenses/Licenses';
 import { Contacts } from 'pages/Contacts/Contacts';
 import { ServiceDetail } from 'pages/ServiceDetail/ServiceDetail';
-
+import { Seo } from './seo/Seo';
+import { GlobalSchema } from './seo/GlobalSchema';
+import { CookieBanner } from 'components/CookieBanner/CookieBanner';
+import { NotFound } from 'pages/NotFound/NotFound';
+import { Privacy } from 'pages/Privacy/Privacy';
 
 export const App = () => {
  
@@ -38,6 +42,8 @@ export const App = () => {
 
   return (
    <>
+      <Seo />
+      <GlobalSchema />
       <Routes>
         <Route path='/' element={<Layout />}>
         <Route index path="/" element={<HomePage />} />
@@ -47,9 +53,12 @@ export const App = () => {
           <Route path="pro-nas" element={<CompanyAbout />} />
           <Route path="litsenzii" element={<Licenses />} />
           <Route path="kontaktu" element={<Contacts/>} />
+          <Route path="politika-konfidentsiinosti" element={<Privacy />} />
+          <Route path="*" element={<NotFound />} />
           <Route path="*" element={<Navigate replace to="/" />} />
         </Route> 
-      </Routes> 
+      </Routes>
+      <CookieBanner /> 
       <ScrollToTopButton visible={showButton} onClick={handleScrollToTop}>
         <FaArrowUp />
       </ScrollToTopButton>

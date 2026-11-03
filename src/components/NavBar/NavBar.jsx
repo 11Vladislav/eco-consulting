@@ -43,9 +43,9 @@ export const NavBar = () => {
                         Працюємо по всій Україні &nbsp;9:00 - 18:00
                     </ContactItem>
                     <ContactItem>
-                        <ContactMail as="a"  href="mailto:info@www.eco-consulting.com.ua">
+                        <ContactMail as="a"  href="mailto:info@.eco-consulting.com.ua">
                                <VscMail width="28" height="28" />
-                                <ItemText>info@www.eco-consulting.com.ua</ItemText>
+                                <ItemText>info@.eco-consulting.com.ua</ItemText>
                         </ContactMail>
                                         
                     </ContactItem>
