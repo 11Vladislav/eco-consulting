@@ -11,8 +11,8 @@ export const HeroContent = () => {
                     <SubTitle>ВАШ НАДІЙНИЙ ПОМІЧНИК В СФЕРІ ЕКОЛОГІЇ З 2013 РОКУ</SubTitle>
                 </TitleContainer>
                 <ButtonContainer>
-                   <Link to="/services"><Button>Послуги</Button></Link> 
-                    <Link to="/licenses"><Button>Ліцензії</Button></Link>
+                   <Link to="/poslugy"><Button>Послуги</Button></Link> 
+                    <Link to="/litsenzii"><Button>Ліцензії</Button></Link>
                 </ButtonContainer>
             </Wrap>
         </>
